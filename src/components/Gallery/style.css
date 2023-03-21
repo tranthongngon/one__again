@@ -1,0 +1,28 @@
+.site-content {
+ flex: 1;
+ padding-top: 20px;
+ padding-bottom: 20px;
+}
+.site-content-wrap {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.site-content-wrap h3 {
+ font-size: 22px;
+ color: #3A98B9;
+ line-height: 1;
+}
+.site-content-wrap button {
+ padding: 7px 12px;
+ font-size: 16px;
+ line-height: 1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #C1AEFC;
+ border: 1px solid #F6F7C1;
+ color: #F6F7C1;
+ border-radius: 8px;
+ cursor: pointer;
+}
