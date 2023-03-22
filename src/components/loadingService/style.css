@@ -1,0 +1,95 @@
+.loading-service {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-align: center;
+ -ms-flex-align: center;
+ align-items: center;
+ -webkit-box-pack: center;
+ -ms-flex-pack: center;
+ justify-content: center;
+ background-color: rgba(40, 84, 48, 0.5);
+ z-index: 50;
+}
+
+.loading-service span {
+ z-index: 51;
+ position: relative;
+ opacity: 1;
+ display: inline-block;
+ margin: 0 -.05em;
+ font-family: 'Roboto', sans-serif;
+ letter-spacing: 1.5rem;
+ font-size: 50px;
+ font-weight: 800;
+ color: #fff;
+ -webkit-animation: loadingservice 0.7s infinite;
+ animation: loadingservice 0.7s infinite;
+}
+
+.loading-service span:nth-child(2) {
+ -webkit-animation-delay: 0.1s;
+ animation-delay: 0.1s;
+}
+
+.loading-service span:nth-child(3) {
+ -webkit-animation-delay: 0.2s;
+ animation-delay: 0.2s;
+}
+
+.loading-service span:nth-child(4) {
+ -webkit-animation-delay: 0.3s;
+ animation-delay: 0.3s;
+}
+
+.loading-service span:nth-child(5) {
+ -webkit-animation-delay: 0.4s;
+ animation-delay: 0.4s;
+}
+
+.loading-service span:nth-child(6) {
+ -webkit-animation-delay: 0.5s;
+ animation-delay: 0.5s;
+}
+
+.loading-service span:nth-child(7) {
+ -webkit-animation-delay: 0.6s;
+ animation-delay: 0.6s;
+}
+.loading-service span:nth-child(8) {
+ -webkit-animation-delay: 0.7s;
+ animation-delay: 0.7s;
+}
+@-webkit-keyframes loadingservice {
+ 0%, 100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+ }
+
+ 50% {
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+ }
+}
+
+@keyframes loadingservice {
+ 0%, 100% {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+ }
+
+ 50% {
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+ }
+}
+
+.loading span {
+ font-size: 25px;
+ letter-spacing: 0.75rem;
+}
