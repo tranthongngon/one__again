@@ -17,6 +17,8 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CloseIcon from "@mui/icons-material/Close";
 import LoadingService from "../loadingService";
+import { Fancybox } from '@fancyapps/ui/dist/fancybox/fancybox.esm.js';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 const uniqueArrayObject = (array, key) => {
   return [...new Map(array.map((item) => [item[key], item])).values()];
@@ -89,6 +91,7 @@ export default function Gallery() {
           ]);
         });
       });
+      Fancybox.bind('[data-fancybox="gallery"]')
     });
   };
 
@@ -175,7 +178,7 @@ export default function Gallery() {
   return (
     <section className="site-content">
       {loading && checkConfirm && <LoadingService/>}
-      {dataImageView.img && (
+      {/* {dataImageView.img && (
         <div className="view-full-image">
           <button
             className="btn-action btn-action-left"
@@ -205,7 +208,7 @@ export default function Gallery() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
       <div className="container">
         {checkConfirm && (
           <div className="site-content-wrap">
@@ -239,11 +242,13 @@ export default function Gallery() {
                     uniqueArrayObject(listUrl, "fullPath").map(
                       (item, index) => (
                         <div className="gallery-item" key={index}>
-                          <img
-                            src={item.url}
-                            alt="gallery"
-                            onClick={() => handleFullImage(item, index)}
-                          />
+                          <a href={item.url} data-fancybox="gallery">
+                            <img
+                              src={item.url}
+                              alt="gallery"
+                              onClick={() => handleFullImage(item, index)}
+                            />
+                          </a>
                         </div>
                       )
                     )}
